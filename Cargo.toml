@@ -1,0 +1,22 @@
+[package]
+name = "remote_tools"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "main_server"
+path = "src/main_server.rs"
+
+[[bin]]
+name = "secondary_server"
+path = "src/secondary_server.rs"
+
+[dependencies]
+tiny_http = "0.12"
+wake-on-lan = "0.2"
+clap = { version="4.1", features=["derive"] }
